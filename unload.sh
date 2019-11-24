@@ -1,4 +1,4 @@
-unset trims
+unset trims;
 
 _remove_alias () {
   alias $1 2>/dev/null 1>&2;
