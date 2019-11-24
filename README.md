@@ -25,6 +25,20 @@ Load *shlibs/unload.sh* to disable it:
 $ source path/to/shlibs/unload.sh
 ```
 
+## Declarations
+
+### Shell Functions
+
+* `trims`: use `perl(1)` to remove trailing spases in source
+
+### Shell Aliases
+
+* `ls --color=auto`
+* `mv -i`
+* `cp -i`
+* `rm -i`
+* `mkdir -p`
+
 ## Copyright
 
 Apache 2.0
