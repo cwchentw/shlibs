@@ -13,10 +13,16 @@ To reduce the burden of repeated setting, I wrote this script.
 
 ## Usage
 
-Load *commons.sh* to activate it.
+Load *shlibs/load.sh* to enable it:
 
 ```
-$ source path/to/shlibs/commons.sh
+$ source path/to/shlibs/load.sh
+```
+
+Load *shlibs/unload.sh* to disable it:
+
+```
+$ source path/to/shlibs/unload.sh
 ```
 
 ## Copyright

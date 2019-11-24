@@ -18,6 +18,8 @@ else
   echo "trims is set on your system" >&2;
 fi
 
+alias ls='ls --color=auto';
 alias mv='mv -i';
 alias cp='cp -i';
 alias rm='rm -i';
+alias mkdir='mkdir -p';
