@@ -9,7 +9,12 @@ Currently, **shlibs** intends for personal use only. The content of shlibs may c
 ## Why shlibs?
 
 I usually write and test programs in a cloud IDE. Each time I spawn a new virtual host, I have to set some aliases and functions for the environment.
-To reduce the burden of repeated setting, I wrote this script.
+To reduce the burden of repeated setting, I wrote shlibs.
+
+## System Requirements
+
+* A sh-compatible shell
+* Perl
 
 ## Usage
 
