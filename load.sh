@@ -2,20 +2,28 @@
 # Use it at your own risk!
 # Author: Michael Chen  License: Apache 2.0
 
+_is_perl_installed () {
+  perl --version 2>/dev/null 1>&2;
+  if [ "$?" -ne 0 ]; then
+    echo 1;
+    return;
+  fi
 
-perl --version > /dev/null;
-if [ "$?" -ne 0 ]; then
+  echo 0;
+}
+
+if [ $(_is_perl_installed | cat) -ne 0 ]; then
   echo "Perl is not installed on your system" >&2;
-  exit 1;
-fi
-
-type trims 2>/dev/null 1>&2;
-if [ "$?" -ne 0 ]; then
-  trims () {
-    perl -lpi -e "s{\s+$}{}g;" $@;
-  }
+  echo "trims is disabled" >&2;
 else
-  echo "trims is set on your system" >&2;
+  type trims 2>/dev/null 1>&2;
+  if [ "$?" -ne 0 ]; then
+    trims () {
+      perl -lpi -e "s{\s+$}{}g;" $@;
+    }
+  else
+    echo "trims is set on your system" >&2;
+  fi
 fi
 
 type psquery 2>/dev/null 1>&2;
@@ -31,3 +39,5 @@ alias mv='mv -i';
 alias cp='cp -i';
 alias rm='rm -i';
 alias mkdir='mkdir -p';
+
+unset _is_perl_installed;
