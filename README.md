@@ -35,6 +35,7 @@ $ source path/to/shlibs/unload.sh
 ### Shell Functions
 
 * `trims`: use `perl(1)` to remove trailing spases in source
+* `psquery`: query PID by text
 
 ### Shell Aliases
 
