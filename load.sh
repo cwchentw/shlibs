@@ -35,15 +35,6 @@ else
   echo "psquery is set on your system" >&2;
 fi
 
-type now 2>/dev/null 1>&2;
-if [ "$?" -ne 0 ]; then
-  now () {
-    date +"%Y/%m/%d %I:%M %p %z"
-  }
-else
-  echo "now is set on your system" >&2;
-fi
-
 alias ls='ls --color=auto -F';
 alias mv='mv -i';
 alias cp='cp -i';

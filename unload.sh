@@ -1,6 +1,5 @@
 unset trims;
 unset psquery;
-unset now;
 
 _remove_alias () {
   alias $1 2>/dev/null 1>&2;
