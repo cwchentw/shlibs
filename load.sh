@@ -12,12 +12,12 @@ _is_perl_installed () {
   echo 0;
 }
 
-if [ $(_is_perl_installed | cat) -ne 0 ]; then
+if [ $(_is_perl_installed) != 0 ]; then
   echo "Perl is not installed on your system" >&2;
   echo "trims is disabled" >&2;
 else
   type trims 2>/dev/null 1>&2;
-  if [ "$?" -ne 0 ]; then
+  if [ $? != 0 ]; then
     trims () {
       perl -lpi -e "s{\s+$}{}g;" $@;
     }
@@ -34,7 +34,8 @@ if [ "$?" -ne 0 ]; then
 else
   echo "psquery is set on your system" >&2;
 fi
-alias ls='ls --color=auto';
+
+alias ls='ls --color=auto -F';
 alias mv='mv -i';
 alias cp='cp -i';
 alias rm='rm -i';
