@@ -34,8 +34,9 @@ $ source path/to/shlibs/unload.sh
 
 ### Shell Functions
 
-* `trims`: use `perl(1)` to remove trailing spases in source
+* `now`: show current local time
 * `psquery`: query PID by text
+* `trims`: use `perl(1)` to remove trailing spases in source
 
 ### Shell Aliases
 
