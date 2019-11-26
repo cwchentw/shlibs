@@ -6,11 +6,11 @@ _is_perl_installed ()
 {
     if ! perl --version 2>/dev/null 1>&2;
     then
-        echo 1;
+        echo false;
         return;
     fi
 
-    echo 0;
+    echo true;
 }
 
 if ! _is_perl_installed > /dev/null;
