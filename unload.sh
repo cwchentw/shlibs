@@ -1,11 +1,12 @@
 unset trims;
 unset psquery;
 
-_remove_alias () {
-  alias $1 2>/dev/null 1>&2;
-  if [ "$?" -eq 0 ]; then
-    unalias $1
-  fi
+_remove_alias ()
+{
+    if (alias $1 2>/dev/null 1>&2);
+    then
+        unalias $1;
+    fi
 }
 
 _remove_alias ls;
