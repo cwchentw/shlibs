@@ -22,9 +22,11 @@ else
     then
         trims ()
         {
-            if [ -z "$1" ];
+            local file=$1;
+            if [ -z "$file" ];
             then
-                return;
+                echo "No file" >&2;
+                return 1;
             fi
 
             perl -lpi -e "s{\s+$}{}g;" $@;
@@ -38,12 +40,15 @@ if ! psquery 2>/dev/null 1>&2;
 then
     psquery ()
     {
-        if [ -z "$1" ];
+        local query=$1;
+
+        if [ -z "$query" ];
         then
-            return;
+            echo "No query" >&2;
+            return 1;
         fi
 
-        ps aux | grep $1 | grep -v grep | tr -s ' ' | cut -d' ' -f2;
+        ps aux | grep $query | grep -v grep | tr -s ' ' | cut -d' ' -f2;
     }
 else
     echo "psquery is set on your system" >&2;
