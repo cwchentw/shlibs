@@ -1,5 +1,6 @@
 unset trims;
 unset psquery;
+unset repeat;
 
 _remove_alias ()
 {
