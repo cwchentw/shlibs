@@ -30,14 +30,33 @@ Load *shlibs/unload.sh* to disable it:
 $ source path/to/shlibs/unload.sh
 ```
 
-## Declarations
-
-### Shell Functions
+## Shell Functions in shlibs
 
 * `psquery`: query PID by text
+* `repeat`: try specific command multiple times
 * `trims`: use `perl(1)` to remove trailing spases in source
 
-### Shell Aliases
+### `repeat`
+
+By default, `repeat` try specific command for 5 times:
+
+```
+$ repeat wget -c https://example.com/path/to/software-0.1.tar.gz
+```
+
+You may try your command more or less times:
+
+```
+$ repeat 3 wget -c https://example.com/path/to/software-0.1.tar.gz
+```
+
+You may try your command until it succeeds with `0` or `-1` times:
+
+```
+$ repeat -1 wget -c https://example.com/path/to/software-0.1.tar.gz
+```
+
+## Shell Aliases in shlibs
 
 * `ls --color=auto`
 * `mv -i`
