@@ -6,19 +6,19 @@ _is_perl_installed ()
 {
     if ! perl --version 2>/dev/null 1>&2;
     then
-        echo false;
-        return;
+        return false;
     fi
 
-    echo true;
+    return true;
 }
 
+# Check it later.
 if ! _is_perl_installed > /dev/null;
 then
     echo "Perl is not installed on your system" >&2;
     echo "trims is disabled" >&2;
 else
-    if ! trims 2>/dev/null 1>&2;
+    if ! type trims 2>/dev/null 1>&2;
     then
         trims ()
         {
@@ -36,7 +36,8 @@ else
     fi
 fi
 
-if ! psquery 2>/dev/null 1>&2;
+# Check it later.
+if ! type psquery 2>/dev/null 1>&2;
 then
     psquery ()
     {
@@ -52,6 +53,50 @@ then
     }
 else
     echo "psquery is set on your system" >&2;
+fi
+
+# Check it later.
+if ! type repeat 2>/dev/null 1>&2;
+then
+    repeat ()
+    {
+        if [ -z "$1" ];
+        then
+            return;
+        fi
+
+        local _try=$1;
+        local _i=5;
+    
+        if echo $_try | grep -oP "^[+-]?\d+$" > /dev/null;
+        then
+            _i=$_try;
+            shift;
+        fi
+    
+        if [ -z "$1" ];
+        then
+            return;
+        fi
+
+        if [ $_i -gt 0 ];
+        then
+            while [ $_i -gt 0 ];
+            do
+                $@ && return;
+                sleep 10;
+                _i=$(( $_i - 1));
+            done
+        else
+            while true;
+            do
+                $@ && return;
+                sleep 10;
+            done
+        fi
+    }
+else
+    echo "repeat is set on your system" >&2;
 fi
 
 alias ls='ls --color=auto -F';
