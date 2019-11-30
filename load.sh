@@ -4,12 +4,12 @@
 
 _is_perl_installed ()
 {
-    if ! perl --version 2>/dev/null 1>&2;
+    if ! command -v perl 2>/dev/null 1>&2;
     then
-        return false;
+        return 1;
     fi
 
-    return true;
+    return 0;
 }
 
 # Check it later.
@@ -67,13 +67,13 @@ then
 
         local _try=$1;
         local _i=5;
-    
+
         if echo $_try | grep -oP "^[+-]?\d+$" > /dev/null;
         then
             _i=$_try;
             shift;
         fi
-    
+
         if [ -z "$1" ];
         then
             return;
