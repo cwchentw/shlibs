@@ -99,7 +99,13 @@ else
     echo "repeat is set on your system" >&2;
 fi
 
-alias ls='ls --color=auto -F';
+if [ $(uname) = "Linux" ];
+then
+    alias ls='ls -F --color=auto';
+else
+    alias ls='ls -F -G';
+fi
+
 alias mv='mv -i';
 alias cp='cp -i';
 alias rm='rm -i';
