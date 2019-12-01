@@ -1,6 +1,6 @@
-unset trims;
-unset psquery;
-unset repeat;
+unset -f trims;
+unset -f psquery;
+unset -f try;
 
 _remove_alias ()
 {

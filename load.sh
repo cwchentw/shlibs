@@ -56,9 +56,9 @@ else
 fi
 
 # Check it later.
-if ! type repeat 2>/dev/null 1>&2;
+if ! type try 2>/dev/null 1>&2;
 then
-    repeat ()
+    try ()
     {
         if [ -z "$1" ];
         then
