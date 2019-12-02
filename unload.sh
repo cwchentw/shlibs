@@ -1,6 +1,16 @@
-unset -f trims;
-unset -f psquery;
-unset -f try;
+_remove_function ()
+{
+    if type $1 2>/dev/null 1>&2;
+    then
+        unset -f $1;
+    fi
+}
+
+_remove_function trims;
+_remove_function psquery;
+_remove_function try;
+
+unset -f _remove_function;
 
 _remove_alias ()
 {

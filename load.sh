@@ -96,7 +96,7 @@ then
         fi
     }
 else
-    echo "repeat is set on your system" >&2;
+    echo "try is set on your system" >&2;
 fi
 
 if [ $(uname) = "Linux" ];
