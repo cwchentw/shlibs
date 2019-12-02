@@ -68,8 +68,7 @@ then
         local _try=$1;
         local _i=5;
 
-        # Refactor it later.
-        if [ $(echo "$_try" | perl -nle 'print \$& while m{^[+-]?\d+$}g;') != "" ];
+        if echo "$_try" | grep -o -E "^[+-]?\d+$" >/dev/null;
         then
             _i=$_try;
             shift;
