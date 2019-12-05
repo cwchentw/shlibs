@@ -99,7 +99,7 @@ else
     echo "try is set on your system" >&2;
 fi
 
-if [ $(uname) = "Linux" ];
+if [ $(uname) = "Linux" ] || [ $(uname) = "SunOS" ];
 then
     alias ls='ls -F --color=auto';
 else
