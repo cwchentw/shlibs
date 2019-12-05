@@ -16,6 +16,15 @@ To reduce the burden of repeated setting, I wrote shlibs.
 * A sh-compatible shell
 * Perl
 
+We tested shlibs on several Unix or Unix-like systems, such as
+
+* Ubuntu 18.04 LTS
+* Amazon Linux, a CentOS clone
+* TrueOS, a FreeBSD derivated system
+* Solaris 11
+
+It should work on other Unix or Unix-like systems as well.
+
 ## Usage
 
 Load *shlibs/load.sh* to enable it:
@@ -60,7 +69,7 @@ $ try -1 wget -c https://example.com/path/to/software-0.1.tar.gz
 
 ## Shell Aliases in shlibs
 
-* `ls --color=auto`
+* `ls -F --color=auto`
 * `mv -i`
 * `cp -i`
 * `rm -i`
