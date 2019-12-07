@@ -14,13 +14,14 @@ To reduce the burden of repeated setting, I wrote shlibs.
 ## System Requirements
 
 * A sh-compatible shell
+* Standard POSIX tools
 * Perl
 
 We tested shlibs on several Unix or Unix-like systems, such as
 
 * Ubuntu 18.04 LTS
-* Amazon Linux, a CentOS clone
-* TrueOS, a FreeBSD derivated system
+* Amazon Linux, RHEL or CentOS compatible
+* TrueOS, FreeBSD compatible
 * Solaris 11
 
 It should work on other Unix or Unix-like systems as well.
@@ -30,13 +31,13 @@ It should work on other Unix or Unix-like systems as well.
 Load *shlibs/load.sh* to enable it:
 
 ```
-$ source path/to/shlibs/load.sh
+$ . path/to/shlibs/load.sh
 ```
 
 Load *shlibs/unload.sh* to disable it:
 
 ```
-$ source path/to/shlibs/unload.sh
+$ . path/to/shlibs/unload.sh
 ```
 
 ## Shell Functions in shlibs
