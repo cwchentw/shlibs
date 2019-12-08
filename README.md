@@ -20,7 +20,7 @@ To reduce the burden of repeated setting, I wrote shlibs.
 We tested shlibs on several Unix or Unix-like systems, such as
 
 * Ubuntu 18.04 LTS
-* Amazon Linux, RHEL or CentOS compatible
+* CentOS 8
 * TrueOS, FreeBSD compatible
 * Solaris 11
 
