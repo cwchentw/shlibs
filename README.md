@@ -21,6 +21,7 @@ We tested shlibs on several Unix or Unix-like systems, such as
 
 * Ubuntu 18.04 LTS
 * CentOS 8
+* openSUSE Leap 15.1
 * TrueOS, FreeBSD compatible
 * Solaris 11
 
