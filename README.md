@@ -8,16 +8,17 @@ Currently, **shlibs** intends for personal use only. The content of shlibs may c
 
 ## Why shlibs?
 
-I usually write and test programs in a cloud IDE. Each time I spawn a new virtual host, I have to set some aliases and functions for the environment.
-To reduce the burden of repeated setting, I wrote shlibs.
+Instead of setting personal configuration files like *.bashrc* or *.zshrc* each time when approaching a new Unix or Unix-like system, it is easier to write common aliases and functions in an external shell script, sourcing it as needed. Therefore, we wrote **shlibs** as common utilities across Unix or Unix systems.
+
+Though **shlibs** is for personal use only, we keep it as general as possible, from which removing personal and private data. Hence, you may apply **shlibs** in your own machine.
 
 ## System Requirements
 
-* A sh-compatible shell
+* A `sh(1)`-compatible shell
 * Standard POSIX tools
 * Perl
 
-We tested shlibs on several Unix or Unix-like systems, such as
+We tested shlibs against several Unix or Unix-like systems:
 
 * Ubuntu 18.04 LTS
 * CentOS 8
