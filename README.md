@@ -1,6 +1,6 @@
 # shlibs
 
-Small but handy aliases and functions for sh-compatible shells.
+Tiny but Handy Aliases and Functions for Bourne Shells.
 
 ## Warning
 
