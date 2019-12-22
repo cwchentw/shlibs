@@ -112,3 +112,46 @@ alias rm='rm -i';
 alias mkdir='mkdir -p';
 
 unset _is_perl_installed;
+
+# Reset color
+export RECOLOR='\e[0m';
+
+# Regular console text colors
+export BLACK='\e[0;30m';
+export RED='\e[0;31m';
+export GREEN='\e[0;32m';
+export YELLOW='\e[0;33m';
+export BLUE='\e[0;34m';
+export PURPLE='\e[0;35m';
+export CYAN='\e[0;36m';
+export WHITE='\e[0;37m';
+
+# Bold console text colors
+export BBLACK='\e[1;30m';
+export BRED='\e[1;31m';
+export BGREEN='\e[1;32m';
+export BYELLOW='\e[1;33m';
+export BBLUE='\e[1;34m';
+export BPURPLE='\e[1;35m';
+export BCYAN='\e[1;36m';
+export BWHITE='\e[1;37m';
+
+# Underline console text colors
+export UBLACK='\e[4;30m';
+export URED='\e[4;31m';
+export UGREEN='\e[4;32m';
+export UYELLOW='\e[4;33m';
+export UBLUE='\e[4;34m';
+export UPURPLE='\e[4;35m';
+export UCYAN='\e[4;36m';
+export UWHITE='\e[4;37m';
+
+# High intensity console text colors
+export IBLACK='\e[0;90m';
+export IRED='\e[0;91m';
+export IGREEN='\e[0;92m';
+export IYELLOW='\e[0;93m';
+export IBLUE='\e[0;94m';
+export IPURPLE='\e[0;95m';
+export ICYAN='\e[0;96m';
+export IWHITE='\e[0;97m';

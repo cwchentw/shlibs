@@ -27,3 +27,41 @@ _remove_alias rm;
 _remove_alias mkdir;
 
 unset _remove_alias;
+
+unset RECOLOR
+
+unset BLACK
+unset RED
+unset GREEN
+unset YELLOW
+unset BLUE
+unset PURPLE
+unset CYAN
+unset WHITE
+
+unset BBLACK
+unset BRED
+unset BGREEN
+unset BYELLOW
+unset BBLUE
+unset BPURPLE
+unset BCYAN
+unset BWHITE
+
+unset UBLACK
+unset URED
+unset UGREEN
+unset UYELLOW
+unset UBLUE
+unset UPURPLE
+unset UCYAN
+unset UWHITE
+
+unset IBLACK
+unset IRED
+unset IGREEN
+unset IYELLOW
+unset IBLUE
+unset IPURPLE
+unset ICYAN
+unset IWHITE

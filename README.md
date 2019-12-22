@@ -78,6 +78,10 @@ $ try -1 wget -c https://example.com/path/to/software-0.1.tar.gz
 * `rm -i`
 * `mkdir -p`
 
+## Variables
+
+* Common console colors
+
 ## Copyright
 
 Apache 2.0
