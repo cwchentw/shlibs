@@ -127,31 +127,41 @@ export CYAN='\e[0;36m';
 export WHITE='\e[0;37m';
 
 # Bold console text colors
-export BBLACK='\e[1;30m';
-export BRED='\e[1;31m';
-export BGREEN='\e[1;32m';
-export BYELLOW='\e[1;33m';
-export BBLUE='\e[1;34m';
-export BPURPLE='\e[1;35m';
-export BCYAN='\e[1;36m';
-export BWHITE='\e[1;37m';
+export BOLD_BLACK='\e[1;30m';
+export BOLD_RED='\e[1;31m';
+export BOLD_GREEN='\e[1;32m';
+export BOLD_YELLOW='\e[1;33m';
+export BOLD_BLUE='\e[1;34m';
+export BOLD_PURPLE='\e[1;35m';
+export BOLD_CYAN='\e[1;36m';
+export BOLD_WHITE='\e[1;37m';
+
+# Bright console text colors
+export BRIGHT_BLACK='\e[0;90m';
+export BRIGHT_RED='\e[0;91m';
+export BRIGHT_GREEN='\e[0;92m';
+export BRIGHT_YELLOW='\e[0;93m';
+export BRIGHT_BLUE='\e[0;94m';
+export BRIGHT_PURPLE='\e[0;95m';
+export BRIGHT_CYAN='\e[0;96m';
+export BRIGHT_WHITE='\e[0;97m';
+
+# Bold bright console text colors
+export BOLD_BRIGHT_BLACK='\e[1;90m';
+export BOLD_BRIGHT_RED='\e[1;91m';
+export BOLD_BRIGHT_GREEN='\e[1;92m';
+export BOLD_BRIGHT_YELLOW='\e[1;93m';
+export BOLD_BRIGHT_BLUE='\e[1;94m';
+export BOLD_BRIGHT_PURPLE='\e[1;95m';
+export BOLD_BRIGHT_CYAN='\e[1;96m';
+export BOLD_BRIGHT_WHITE='\e[1;97m';
 
 # Underline console text colors
-export UBLACK='\e[4;30m';
-export URED='\e[4;31m';
-export UGREEN='\e[4;32m';
-export UYELLOW='\e[4;33m';
-export UBLUE='\e[4;34m';
-export UPURPLE='\e[4;35m';
-export UCYAN='\e[4;36m';
-export UWHITE='\e[4;37m';
-
-# High intensity console text colors
-export IBLACK='\e[0;90m';
-export IRED='\e[0;91m';
-export IGREEN='\e[0;92m';
-export IYELLOW='\e[0;93m';
-export IBLUE='\e[0;94m';
-export IPURPLE='\e[0;95m';
-export ICYAN='\e[0;96m';
-export IWHITE='\e[0;97m';
+export UNDERLINE_BLACK='\e[4;30m';
+export UNDERLINE_RED='\e[4;31m';
+export UNDERLINE_GREEN='\e[4;32m';
+export UNDERLINE_YELLOW='\e[4;33m';
+export UNDERLINE_BLUE='\e[4;34m';
+export UNDERLINE_PURPLE='\e[4;35m';
+export UNDERLINE_CYAN='\e[4;36m';
+export UNDERLINE_WHITE='\e[4;37m';
