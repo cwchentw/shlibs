@@ -1,6 +1,6 @@
 # shlibs
 
-Tiny but handy aliases and functions for Bourne shells.
+Tiny but handy aliases and functions for `sh`-compatible shell.
 
 ## Warning
 
@@ -14,7 +14,7 @@ Though **shlibs** is for personal use only, we keep it as general as possible, f
 
 ## System Requirements
 
-* A `sh(1)`-compatible shell
+* A `sh`-compatible shell
 * Standard POSIX tools
 * Perl
 
@@ -23,7 +23,7 @@ We tested shlibs against several Unix or Unix-like systems:
 * Ubuntu 18.04 LTS
 * CentOS 8
 * openSUSE Leap 15.1
-* TrueOS, FreeBSD compatible
+* TrueOS, which is FreeBSD compatible
 * Solaris 11
 
 It should work on other Unix or Unix-like systems as well.
