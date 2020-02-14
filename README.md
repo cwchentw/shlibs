@@ -24,7 +24,6 @@ We tested shlibs against several Unix or Unix-like systems:
 * CentOS 8
 * openSUSE Leap 15.1
 * TrueOS, which is FreeBSD compatible
-* Solaris 11
 
 It should work on other Unix or Unix-like systems as well.
 
