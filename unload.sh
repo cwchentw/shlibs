@@ -9,6 +9,7 @@ _remove_function ()
 _remove_function trims;
 _remove_function psquery;
 _remove_function try;
+_remvoe_function download;
 
 unset -f _remove_function;
 

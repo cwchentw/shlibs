@@ -43,6 +43,7 @@ $ . path/to/shlibs/unload.sh
 
 ## Shell Functions in shlibs
 
+* `download`: download something with either `wget(1)` or `curl(1)`
 * `psquery`: query PID by text
 * `trims`: use `perl(1)` to remove trailing spases in source
 * `try`: try specific command multiple times
