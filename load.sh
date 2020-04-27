@@ -2,35 +2,40 @@
 # Use it at your own risk!
 # Author: Michael Chen  License: Apache 2.0
 
-download () {
-    local target="$1";
-    local uri="$2";
+if ! type download 2>/dev/null 1>&2;
+then
+    download () {
+        local target="$1";
+        local uri="$2";
 
-    if [ -z "$target" ];
-    then
-        echo "No valid download target" >&2;
-        exit 1;
-    fi
+        if [ -z "$target" ];
+        then
+            echo "No valid download target" >&2;
+            exit 1;
+        fi
 
-    # "$target" is URI now.
-    # Get real `target` by parse URI.
-    if [ -z "$uri" ];
-    then
-        uri="$target";
-        target="$(basename $target)";
-    fi
+        # "$target" is URI now.
+        # Get real `target` by parse URI.
+        if [ -z "$uri" ];
+        then
+            uri="$target";
+            target="$(basename $target)";
+        fi
 
-    if command -v wget --version 2>/dev/null 1>&2;
-    then
-        wget -O "$target" "$uri";
-    elif command -v curl --version 2>/dev/null 1>&2;
-    then
-        curl "$uri" --output "$target";
-    else
-        echo "Neither wget nor curl on the system" >&2;
-        exit 1;
-    fi
-}
+        if command -v wget --version 2>/dev/null 1>&2;
+        then
+            wget -O "$target" "$uri";
+        elif command -v curl --version 2>/dev/null 1>&2;
+        then
+            curl "$uri" --output "$target";
+        else
+            echo "Neither wget nor curl on the system" >&2;
+            exit 1;
+        fi
+    }
+else
+    echo "download is set on the system" >&2;
+fi
 
 _is_perl_installed ()
 {
@@ -62,7 +67,7 @@ else
             perl -lpi -e "s{\s+$}{}g;" $@;
         }
     else
-        echo "trims is set on your system" >&2;
+        echo "trims is set on the system" >&2;
     fi
 fi
 
@@ -82,7 +87,7 @@ then
         ps aux | grep $query | grep -v grep | tr -s ' ' | cut -d' ' -f2;
     }
 else
-    echo "psquery is set on your system" >&2;
+    echo "psquery is set on the system" >&2;
 fi
 
 # Check it later.
@@ -126,7 +131,7 @@ then
         fi
     }
 else
-    echo "try is set on your system" >&2;
+    echo "try is set on the system" >&2;
 fi
 
 if [ $(uname) = "Linux" ] || [ $(uname) = "SunOS" ];
