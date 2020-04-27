@@ -37,18 +37,8 @@ else
     echo "download is set on the system" >&2;
 fi
 
-_is_perl_installed ()
-{
-    if ! command -v perl 2>/dev/null 1>&2;
-    then
-        return 1;
-    fi
-
-    return 0;
-}
-
 # Check it later.
-if ! _is_perl_installed > /dev/null;
+if ! command -v perl --version 2>/dev/null 1>&2;
 then
     echo "Perl is not installed on your system" >&2;
     echo "trims is disabled" >&2;
@@ -145,8 +135,6 @@ alias mv='mv -i';
 alias cp='cp -i';
 alias rm='rm -i';
 alias mkdir='mkdir -p';
-
-unset _is_perl_installed;
 
 # Reset color
 export RECOLOR='\e[0m';
