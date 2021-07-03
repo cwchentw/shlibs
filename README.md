@@ -20,10 +20,10 @@ Though **shlibs** is for personal use only, we keep it as general as possible, f
 
 We tested shlibs against several Unix or Unix-like systems:
 
-* Ubuntu 18.04 LTS
-* CentOS 8
-* openSUSE Leap 15.1
-* TrueOS, which is FreeBSD compatible
+* Ubuntu LTS
+* CentOS
+* openSUSE Leap
+* TrueOS, which is FreeBSD-compatible
 
 It should work on other Unix or Unix-like systems as well.
 
@@ -84,4 +84,4 @@ $ try -1 wget -c https://example.com/path/to/software-0.1.tar.gz
 
 ## Copyright
 
-Apache 2.0
+Copyright (c) 2019-2021 Michelle Chen. Licensed under Apache 2.0
