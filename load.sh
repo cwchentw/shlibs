@@ -38,7 +38,7 @@ else
 fi
 
 # Check it later.
-if ! command -v perl --version 2>/dev/null 1>&2;
+if ! command -v perl 2>/dev/null 1>&2;
 then
     echo "Perl is not installed on your system" >&2;
     echo "trims is disabled" >&2;
