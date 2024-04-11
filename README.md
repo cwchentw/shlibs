@@ -85,4 +85,4 @@ $ try -1 wget -c https://example.com/path/to/software-0.1.tar.gz
 
 ## Copyright
 
-Copyright (c) 2019-2021 Michelle Chen. Licensed under Apache 2.0
+Copyright (c) 2019-2021 ByteBard. Licensed under Apache 2.0

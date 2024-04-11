@@ -1,3 +1,8 @@
+# Remove the custom aliases and functions.
+#
+# Copyright (c) 2019-2021 ByteBard. Licensed under Apache 2.0
+
+
 _remove_function ()
 {
     if type $1 2>/dev/null 1>&2;

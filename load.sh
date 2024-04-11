@@ -1,6 +1,8 @@
 # Small but handy aliases and functions. For Personal use only.
 # Use it at your own risk!
-# Author: Michael Chen  License: Apache 2.0
+#
+# Copyright (c) 2019-2021 ByteBard. Licensed under Apache 2.0
+
 
 if ! type download 2>/dev/null 1>&2;
 then
